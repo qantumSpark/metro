@@ -2,8 +2,8 @@ export function Metronome(){
     let self = this
     
     //Definit les propriétés du Metronome
-    this.tempoMs = 1000;
-    this.base = 4;
+    this.tempoMs = 500; //Default tempo : 120
+    this.base = 4; //Default value
     this.count = 1;
     this.isOn = false;
 
@@ -25,28 +25,26 @@ export function Metronome(){
      */
     this.active = (tempoMs, base, sound) => {
         let timeOut = tempoMs;
-
+        // console.log("base: ", base);
+        // console.log("timeOut: ", timeOut);
+        
         let primarySound = sound.primarySound;
-        let secondarySound = sound.secondarySound;
-
+        let secondarySound = sound.secondarySound;      
         if(self.isOn){
             if(self.count == 1){
                 primarySound.play()
                 self.count = self.count + 1
-                setTimeout(self.active(timeOut, base, sound), timeOut)
-                return
             }else if(self.count !== base){
                 secondarySound.play()
                 self.count = self.count + 1
-                setTimeout(self.active(timeOut, base, sound), timeOut)
-                return
             }else if(self.count == base){
                 secondarySound.play()
                 self.count = 1
-                setTimeout(self.active(timeOut, base, sound), timeOut)
-                return
             }
+            setTimeout(()=>self.active(tempoMs, base, sound), timeOut)            
         }
     }
+
+
     //Private Functions
 }

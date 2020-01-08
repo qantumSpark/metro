@@ -33,8 +33,9 @@ export function $(selector, all){
         return self
     }
     // Hightlight l'élément cliqué dans la list des élements sélectionnés
+    
     self.lightOnClick = ()=>{
-        let bases = self.el
+        let bases = self.el //Require un querySelectorAll (ex: nav-items or others)
         bases.forEach(e=>{
             e.addEventListener('click', ev =>{
                 //Retire la class sur tout les éléments

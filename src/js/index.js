@@ -36,6 +36,8 @@ $('.baseSelect', true).el.forEach(el => {
 })
 
     //Bouton start
+
+//    
 let sound ={
     primarySound: document.getElementById('primSound'),
     secondarySound: document.getElementById('secSound')
@@ -45,9 +47,15 @@ let sound ={
 $("#btn").on('click', ()=>{
     if(!metro.isOn){
         metro.isOn = true
+        $("#btn").el.innerText = "STOP"
+        console.log(metro.isOn);      
         metro.active(metro.tempoMs, metro.base, sound)
     }else{
+        console.log($("#btn").text)
+        $("#btn").el.innerText = "START"
         metro.isOn = false
+        metro.count = 1
+        console.log(metro.isOn);
     }
 })
 
