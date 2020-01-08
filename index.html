@@ -12,19 +12,19 @@
 
     <title>Skeleton App</title>
 </head>
-<body>
-    <section class="title morph" id="title">
+<body class="center">
+    <section class="title morph center" id="title">
         <h1 class="title-text"><span>M</span>étro<span>M</span>od</h1>
     </section>
 
-    <section class="views" id="views">
+    <main class="view center" id="view">
 
-        <div class="home view" id="home">
-            <div class="container">
-                <p class="plus">+</p>
-                <p class="minus">-</p>
-                <h1 id="tempo" class="morph" >120</h1>
-                <input type="range" id="slider" min="40" max="240" value="120">
+        <div class="home center" id="home">
+            <div class="container center">
+                <i class="plus"><img src="./src/css/icons/plus-solid.svg" alt="" srcset=""></i>
+                <i class="minus"><img src="./src/css/icons/minus-solid.svg" alt="" srcset=""></i>
+                <h1 id="tempo" class="morph tempo center" >120</h1>
+                <input type="range" class="slider" id="slider" min="40" max="240" value="120">
             </div>
             
             <div class="selectors">
@@ -32,25 +32,17 @@
                 <div class="baseSelect" id="3">3/4</div>
                 <div class="baseSelect active" id="4">4/4</div>
                 <div class="baseSelect" id="6">6/8</div>
+                <button id="btn">START</button>
             </div>
-            <button id="btn">START</button>
         </div>
 
-        <div class="part view" id="part">
+    </main>
 
-        </div>
-
-        <div class="save view" id="save">
-
-        </div>
-
-    </section>
-
-    <section class="nav morph" id="nav">
+    <section class="nav morph center" id="nav">
         <nav>
-            <a href="#home" class="nav-item">HOME</a>
-            <a href="#part" class="nav-item">PART</a>
-            <a href="#save" class="nav-item">SAVE</a>
+            <a href="#home" class="nav-item"><img src="./src/css/icons/home-solid.svg" alt="" srcset=""></a>
+            <a href="#part" class="nav-item"><img src="./src/css/icons/music-solid.svg" alt="" srcset=""></a>
+            <a href="#save" class="nav-item"><img src="./src/css/icons/save-solid.svg" alt="" srcset=""></a>
         </nav>
     </section>
 

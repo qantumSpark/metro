@@ -1,72 +1,60 @@
+/* Import font // font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+/* Variables */
+:root{
+    --black: rgb(30, 30, 30);
+    --darkcolor: rgb(90, 90, 90);
+    --lightcolor: rgb(200, 200, 200);
+    --white: rgb(230, 230, 230);
+    --blueA: rgb(50, 110, 220, .8);
+    --blueB: rgb(30, 110, 255);
+    --shadowDark:rgba(30, 30, 30, .4);
+    --shadowLight:rgb(230, 230, 230, .3);
+}
+/* End of Variables */
+/* General Styling rules */
+*{padding: 0; margin: 0;  font-family: 'Roboto', sans-serif; box-sizing: border-box;}
+body{text-align: center; justify-content: space-between!important; flex-direction: column; height: 100vh; background-color: var(--darkcolor); color: var(--lightcolor);}
+img{width: 3rem;}
+/* End  of General Styling rules */
+/* Utility Classes */
+.center{display: flex; justify-content: center; align-items: center;}
+.morph{box-shadow: 6px 6px 13px var(--shadowDark), -6px -6px 13px var(--shadowLight);}
+/* End of Utility Classes */
+/* Header & Footer_Nav */
+    /* Header */
+.title{width: 100%; height: 10vh;}
+.title-text{font-size: 2.5rem; font-weight: normal; letter-spacing: 0.5rem;}
+.title-text span{color:var(--blueB); font-weight: bold;}
+    /* End of Header */
+    /* Footer_Nav */
+.nav{width: 100%; height: 10vh;}
+.nav-item{margin: 0 2rem;} 
+.nav-item:active {border-bottom: 5px solid var(--blueA);}   
+.nav-item img{width: 2rem;}
+    /* End of Footer_Nav */
+/* End of Header & Footer_Nav */
+/* Main view areas */
+.view{height: 80vh; width: 100%; }
+    /* Home section */
+.home{height: 100%; flex-direction: column; justify-content: space-between!important;}
+        /* Tempo Selector */
+.home .container{border: 1px solid var(--blueA); border-radius: 50%;height: 200px; width: 200px; margin: 2rem 0; flex-direction: column!important; position: relative;}
+.home i{position: absolute; border-radius: 50%; border: 1px solid var(--blueA); width: 3.5rem; height: 3.5rem; background-color: var(--darkcolor);}
+.minus{right: -40px;}
+.plus{left: -40px;}
+.home .tempo{width: 80%; height: 80%; border-radius: 50%; color: var(--lightcolor);}
+.home .tempo::after{position: absolute; content: ""; width: 50%; height: 50%; box-shadow: 6px 6px 13px var(--shadowDark) inset, -6px -6px 13px var(--shadowLight) inset; border-radius: 50%; background-color: rgb(110, 110, 110); z-index: -1;}
+.home .slider{position: absolute; bottom: -2rem;}
+        /* End of Tempo Selector */
+        /* Base Selector & Start btn*/
 
-*{box-sizing: border-box;}
-
-body{height: 100vh; letter-spacing: 0.2rem; font-family: Arial, Helvetica, sans-serif; background-color: #333; color: #aaa; text-align: center; padding: 0; margin: 0; display: flex; align-items: center; flex-direction: column; justify-content: space-between; flex:1}
-.morph{ box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.1);}
-
-/*HEADER AND FOOTER_NAV STYLE*/
-    /*Header style */
-.title{margin-bottom: 2rem; width: 100%; height: 10vh; display: flex; justify-content: center; align-items: center; letter-spacing: 1.5rem;}
-.title-text{font-size: 2.5rem; font-weight: 300;}
-
-.title-text span{color: rgba(30, 143, 255, 1); font-weight: bold;}
-    /*End of Header style */
-
-    /*Footer_Nav style */
-.nav{margin-top: 2rem; width: 100%; height: 10vh; display: flex; justify-content: center; align-items: center; letter-spacing: 0.5rem;}
-.nav-item{text-align: center; margin: 0 1rem; font-size: 1.5rem; font-weight: 300; outline: none; text-decoration: none; color: #aaa;}
-.nav-item:hover{border-bottom: 2px solid #aaa;}
-    /*End of Footer_Nav style */  
-/*END OF HEADER AND FOOTER_NAV STYLE*/
-
-/* VIEWS STYLING*/
-    /*Commun style*/
-.views{height: 100%;}
-.view{}
-    /*HOME SECTION STYLE==========================================================*/
-.home{height: 100%; display: flex; align-items: center; flex: 1; flex-direction: column; justify-content: space-evenly;}
-        /* TEMPO */
-.home .container{position: relative; display: flex; justify-content: space-evenly; align-items: center;flex-direction: column;}
-
-            /* Tempo BTN */
-.home p{z-index: 1; position: absolute; display: inline-block; height: 5rem; width: 5rem; border-radius: 50%;  background-color: #333; color: rgba(30, 143, 255,1); font-size: 4rem; border: 1px solid rgba(30, 143, 255, 1);}
-.home .plus{top: 0px; left: 140px;}
-.home .minus{top: 0px; right: 140px;}
-            /* End of Tempo BTN */
-
-.home h1{ height: 150px ; width: 150px; margin: 2rem auto; display: flex; justify-content: center; align-items: center; border-radius: 50%; position: relative;}
-.home h1::before{ content: ""; width: 140%; height: 140%; border: 1px solid rgba(30, 143, 255, 1); position: absolute; z-index: -1; border-radius: 50%;}
-.home h1::after{content: ""; background-color: rgb(75, 75, 75); z-index: -1; height: 60%; width: 60%; box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.3), inset -6px -6px 12px rgba(255, 255, 255, 0.1); position: absolute; border-radius: 40%;}
-        /* End of TEMPO */
-
-        /* Slider */
-
-
-        /* End of Slider */
-
-        /* Base Selectors */
-.selectors{display: flex; justify-content: space-evenly; align-items: center;}
-.baseSelect{margin: 2rem 1rem; border-radius: 10px; border: 1px solid #aaa; font-size: 1.3rem; padding: 1rem; transition: ease 0.3s;}
-.selectors .active{color:#333; background-color: #aaa;}
-.baseSelect:hover{color:#333; background-color: #aaa;}
-        /*End of Base Selectors*/
-
-        /* Button */
-button{ font-size: 2rem; text-align: center;display: inline-block; width: 100%; padding: 1rem; border-radius: 25px; border: none; color: #aaa; background-color: rgba(30, 143, 255, 0.8); cursor: pointer; transition: ease 0.3s; letter-spacing: 0.5rem;}
-button:hover{background-color: rgba(30, 143, 255, 1)}
-button:active{transform: scale(1.05);}
-button, button:hover, button:active{outline: 0; border: none; }
-        /*End of Button*/
-    /*END OF HOME SECTION STYLE==========================================================*/
-
-    /*PART SECTION STYLE=================================================================*/
-.part{}
-
-    /*END OF PART SECTION STYLE==========================================================*/
-
-    /*SAVE SECTION STYLE=================================================================*/
+        /* End of Base Selector & Start btn*/
+    /* End of Home section */
+    /* Part section */
     
-
-    /*END OF SAVE SECTION STYLE==========================================================*/
-
-/* END OF VIEWS STYLING*/
+    /* End of Part section */
+    /* Save section */
+    
+    /* End of Save section */
+/* End of Main view areas */
