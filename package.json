@@ -1,0 +1,19 @@
+{
+  "name": "metro",
+  "version": "1.0.0",
+  "description": "Une app Metronome modulable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qantumSpark/metro.git"
+  },
+  "author": "Quantum Spark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qantumSpark/metro/issues"
+  },
+  "homepage": "https://github.com/qantumSpark/metro#readme"
+}
