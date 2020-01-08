@@ -2,8 +2,8 @@ export function Metronome(){
     let self = this
     
     //Definit les propriétés du Metronome
-    this.tempoMs = "undefined";
-    this.base ="undefined";
+    this.tempoMs = 1000;
+    this.base = 4;
     this.count = 1;
     this.isOn = false;
 
@@ -26,9 +26,9 @@ export function Metronome(){
     this.active = (tempoMs, base, sound) => {
         let timeOut = tempoMs;
 
-
         let primarySound = sound.primarySound;
         let secondarySound = sound.secondarySound;
+
         if(self.isOn){
             if(self.count == 1){
                 primarySound.play()
