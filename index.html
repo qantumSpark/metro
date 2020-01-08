@@ -13,16 +13,46 @@
     <title>Skeleton App</title>
 </head>
 <body>
-    <h1 id="tempo" class="morph" >120</h1>
-    <input type="range" id="slider" min="40" max="240" value="120">
+    <section class="title morph" id="title">
+        <h1 class="title-text"><span>M</span>étro<span>M</span>od</h1>
+    </section>
 
-    <div class="selectors">
-        <div class="baseSelect" id="2">2/4</div>
-        <div class="baseSelect" id="3">3/4</div>
-        <div class="baseSelect active" id="4">4/4</div>
-        <div class="baseSelect" id="6">6/8</div>
-    </div>
-    <button id="btn">START</button>
+    <section class="views" id="views">
+
+        <div class="home view" id="home">
+            <div class="container">
+                <p class="plus">+</p>
+                <p class="minus">-</p>
+                <h1 id="tempo" class="morph" >120</h1>
+                <input type="range" id="slider" min="40" max="240" value="120">
+            </div>
+            
+            <div class="selectors">
+                <div class="baseSelect" id="2">2/4</div>
+                <div class="baseSelect" id="3">3/4</div>
+                <div class="baseSelect active" id="4">4/4</div>
+                <div class="baseSelect" id="6">6/8</div>
+            </div>
+            <button id="btn">START</button>
+        </div>
+
+        <div class="part view" id="part">
+
+        </div>
+
+        <div class="save view" id="save">
+
+        </div>
+
+    </section>
+
+    <section class="nav" id="nav">
+        <nav>
+            <a href="#home" class="nav-item">HOME</a>
+            <a href="#part" class="nav-item">PART</a>
+            <a href="#save" class="nav-item">SAVE</a>
+        </nav>
+    </section>
 
     <audio id="primSound" src="./src/audio/first.wav"></audio>
     <audio id="secSound" src="./src/audio/other.wav"></audio>
