@@ -1,0 +1,22 @@
+
+*{box-sizing: border-box;}
+
+body{background-color: #333; color: #fff; text-align: center; padding: 150px 35%;}
+.morph{ box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.1);}
+
+/* TEMPO */
+h1{ height: 100px; display: flex; justify-content: center; align-items: center; border-radius: 25px; position: relative;}
+h1::after{content: ""; height: 60%; width: 85%; box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.3), inset -6px -6px 12px rgba(255, 255, 255, 0.1); position: absolute; border-radius: 10px;}
+
+/* Slider */
+
+/* Base Selectors */
+.selectors{display: flex; justify-content: space-evenly; align-items: center;}
+.baseSelect{margin: 2rem 1rem; border-radius: 10px; border: 1px solid #EEE; padding: 1rem; transition: ease 0.3s;}
+.baseSelect:hover{color:#333; background-color: #EEE;}
+
+/* Button */
+button{display: block; width: 90%; height: 2rem; border-radius: 25px; border: none; color: #EEE; background-color: rgba(30, 143, 255, 0.8); cursor: pointer; transition: ease 0.3s; letter-spacing: 0.5rem;}
+button:hover{background-color: rgba(30, 143, 255, 1)}
+button:active{transform: scale(1.05);}
+button, button:hover, button:active{outline: 0; border: none; }
