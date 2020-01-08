@@ -3,18 +3,18 @@
 /* Variables */
 :root{
     --black: rgb(30, 30, 30);
-    --darkcolor: rgb(90, 90, 90);
+    --darkcolor: rgb(211, 211, 211);
     --lightcolor: rgb(200, 200, 200);
     --white: rgb(230, 230, 230);
     --blueA: rgb(50, 110, 220, .8);
     --blueB: rgb(30, 110, 255);
     --shadowDark:rgba(30, 30, 30, .4);
-    --shadowLight:rgb(230, 230, 230, .3);
+    --shadowLight:rgb(255, 255, 255);
 }
 /* End of Variables */
 /* General Styling rules */
 *{padding: 0; margin: 0;  font-family: 'Roboto', sans-serif; box-sizing: border-box;}
-body{text-align: center; justify-content: space-between!important; flex-direction: column; height: 100vh; background-color: var(--darkcolor); color: var(--lightcolor);}
+body{text-align: center; justify-content: space-between!important; flex-direction: column; height: 100vh; background-color: var(--darkcolor); color: var(--black);}
 img{width: 3rem;}
 /* End  of General Styling rules */
 /* Utility Classes */
@@ -43,12 +43,23 @@ img{width: 3rem;}
 .home i{position: absolute; border-radius: 50%; border: 1px solid var(--blueA); width: 3.5rem; height: 3.5rem; background-color: var(--darkcolor);}
 .minus{right: -40px;}
 .plus{left: -40px;}
-.home .tempo{width: 80%; height: 80%; border-radius: 50%; color: var(--lightcolor);}
-.home .tempo::after{position: absolute; content: ""; width: 50%; height: 50%; box-shadow: 6px 6px 13px var(--shadowDark) inset, -6px -6px 13px var(--shadowLight) inset; border-radius: 50%; background-color: rgb(110, 110, 110); z-index: -1;}
-.home .slider{position: absolute; bottom: -2rem;}
+.home .tempo{width: 80%; height: 80%; border-radius: 50%; color: var(--black);}
+.home .tempo::after{position: absolute; content: ""; width: 50%; height: 50%; box-shadow: 6px 6px 13px var(--shadowDark) inset, -6px -6px 13px var(--shadowLight) inset; border-radius: 50%; background-color: rgb(255, 255, 255); z-index: -1;}
+.home .slider{position: absolute; bottom: -2rem; display: none;}
         /* End of Tempo Selector */
         /* Base Selector & Start btn*/
+.selectors{flex-direction: column; width: 150px; height: 150px; margin-bottom: 2rem; border-radius: 50%; border-left: 2px solid var(--blueA); position: relative; left: -30px;}
+.selectors::before{border-radius: 50%; position: absolute; left: 115px; content: ""; width: 90%; height: 90%; box-shadow: 6px 6px 13px var(--shadowDark), -6px -6px 13px var(--shadowLight);}
+.baseSelect{position: absolute; left: -20px; box-sizing: border-box; padding: 0.5rem; border-radius: 50%; border: 1px solid var(--blueA); color: var(--blueA); background-color: var(--darkcolor);}
+.baseSelect.active{color:var(--darkcolor); background-color: var(--blueB);}
+.btn{position: absolute; border: none; height: 70%; width: 70%; border-radius: 50%; color: var(--lightcolor); font-size: 1.2rem; left: 130px; letter-spacing: 0.1rem;}
+.btn.gradient{background: rgb(23, 100, 150); background: radial-gradient(circle, rgb(23, 100, 150) 0%, rgba(33,127,221,1) 25%, rgba(3,6,9,1) 70%);}
 
+.baseSelect.two{top: -15px; left:40px;}
+.baseSelect.three{top: 10px; left:-10px;}
+.baseSelect.six{bottom: 10px; left:-10px;}
+
+.baseSelect.nine{bottom: -15px; left:40px;}
         /* End of Base Selector & Start btn*/
     /* End of Home section */
     /* Part section */
