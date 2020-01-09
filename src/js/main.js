@@ -2,13 +2,15 @@
 import { Metronome } from "./metro";
 //Importation de la librairie
 import { $ } from "./utilities";
-
-
+//Importation du moteur de Navigation
+import {Nav} from './nav';
 
 //Init Métronome App:
 const metro = new Metronome();
-// console.log(metro)
 
+//Init de la Navigation
+const nav = new Nav
+nav.init()
 
 //DOM Manipulations:
 

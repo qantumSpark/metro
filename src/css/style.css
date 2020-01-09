@@ -19,13 +19,13 @@ img{width: 3rem;}
 /* End  of General Styling rules */
 /* Utility Classes */
 .center{display: flex; justify-content: center; align-items: center;}
-.morph{box-shadow: 6px 6px 13px var(--shadowDark), -6px -6px 13px var(--shadowLight);}
-.disapear-left{transition: ease 0.5s; opacity: 0; transform: translateX(-50vw);}
-.disapear-right{transition: ease 0.5s; opacity: 0; transform: translateX(50vw);}
+.morph{box-shadow: 6px 6px 5px var(--shadowDark), -6px -6px 13px var(--shadowLight);}
+.morph-inv{box-shadow:inset 3px 3px 5px var(--shadowDark),inset -3px -3px 15px var(--shadowLight);}
+.hidden{display:none!important;}
 /* End of Utility Classes */
 /* Header & Footer_Nav */
     /* Header */
-.title{width: 100%; height: 10vh;}
+.title{width: 100%; height: 10vh; position: relative; z-index: 10; background-color: var(--lightcolor);}
 .title-text{font-size: 2.5rem; font-weight: normal; letter-spacing: 0.5rem;}
 .title-text span{color:var(--blueB); font-weight: bold;}
     /* End of Header */
@@ -38,8 +38,10 @@ img{width: 3rem;}
 /* End of Header & Footer_Nav */
 /* Main view areas */
 .view{height: 80vh; width: 100%; }
+.page{ opacity: 0; transform: translateY(-20vh); transition: 0.3s ease-in-out; height: 100%; flex-direction: column; justify-content: space-between!important;}
+.page.active{ opacity: 1; transform: translateY(0);}
     /* Home section */
-.home{height: 100%; flex-direction: column; justify-content: space-between!important;}
+.home{width: 100%;}
         /* Tempo Selector */
 .home .container{border: 1px solid var(--blueA); border-radius: 50%;height: 200px; width: 200px; margin: 2rem 0; flex-direction: column!important; position: relative;}
 .home i{position: absolute; border-radius: 50%; border: 1px solid var(--blueA); width: 3.5rem; height: 3.5rem; background-color: var(--darkcolor);}
@@ -65,7 +67,20 @@ img{width: 3rem;}
         /* End of Base Selector & Start btn*/
     /* End of Home section */
     /* Part section */
-    
+.part{width: 100%;}
+.part .form-container{width: 80%; height: 15%; box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);z-index: -5; position: relative; top: -20px; border-radius: 20px; padding: 20px 0.2rem 0 0.2rem; }
+.part form {width: 100%; justify-content: space-between;}
+.part input[type="number"] {-webkit-appearance: textfield; -moz-appearance: textfield; appearance: textfield;}
+.part input[type=number]::-webkit-inner-spin-button,.part input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;}
+.part input, .part select{height: 2rem; margin: 0.5rem; font-size: 1rem; text-align: center; border-radius: 20px; border: none; background: none; max-width: 20vw;}
+.part .nb-mesures{}
+.part .tempo{}
+.part select{}
+.part option{}
+.part button{margin-left: auto; padding: 0.3rem 0rem; border-radius: 50%; background: var(--blueA); border: 3px solid var(--blueB); color: var(--lightcolor); letter-spacing: 0.2rem; font-weight: bold; font-size: 0.5rem;}
+/* Modules */
+.mod-container{width: 80%;}
+.mod-item{}
     /* End of Part section */
     /* Save section */
     
