@@ -56,9 +56,10 @@ img{width: 3rem;}
 .selectors::before{border-radius: 50%; position: absolute; left: 115px; content: ""; width: 90%; height: 90%; box-shadow: 6px 6px 13px var(--shadowDark), -6px -6px 13px var(--shadowLight);}
 .baseSelect{position: absolute; left: -20px; box-sizing: border-box; padding: 0.5rem; border-radius: 50%; border: 1px solid var(--blueA); color: var(--blueA); background-color: var(--darkcolor);}
 .baseSelect.active{color:var(--darkcolor); background-color: var(--blueB);}
-.btn{position: absolute; border: none; height: 70%; width: 70%; border-radius: 50%; color: var(--lightcolor); font-size: 1.2rem; left: 130px; letter-spacing: 0.1rem;}
+.btn{position: absolute; border: none; height: 70%; width: 70%; border-radius: 50%; color: var(--lightcolor); font-size: 1.2rem; left: 130px; letter-spacing: 0.1rem;outline: none; transition: ease-in 0.05s; color: var(--white);}
 .btn.gradient{background: rgb(23, 100, 150); background: radial-gradient(circle, rgb(23, 100, 150) 0%, rgba(33,127,221,1) 25%, rgba(3,6,9,1) 70%);}
-
+.btn.blink-orange{background: rgb(207, 134, 24); background: radial-gradient(circle, rgb(212, 92, 23) 0%, rgb(255, 222, 36) 25%, rgb(9, 7, 3) 90%); color: var(--black)}
+.btn.blink-green{background: rgb(24, 207, 64); background: radial-gradient(circle, rgb(23, 212, 39) 0%, rgb(135, 255, 36) 25%, rgb(3, 9, 4) 90%); color: var(--black)}
 .baseSelect.two{top: -15px; left:40px;}
 .baseSelect.three{top: 10px; left:-10px;}
 .baseSelect.six{bottom: 10px; left:-10px;}

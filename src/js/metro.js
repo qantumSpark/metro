@@ -25,6 +25,9 @@ export function Metronome(){
      */
     this.active = (tempoMs, base, sound) => {
         let timeOut = tempoMs;
+        if(self.base === 6 || self.base === 9){
+            timeOut = tempoMs / 2
+        }
         // console.log("base: ", base);
         // console.log("timeOut: ", timeOut);
         
@@ -33,12 +36,15 @@ export function Metronome(){
         if(self.isOn){
             if(self.count == 1){
                 primarySound.play()
+                blink('.btn', 'blink-green')
                 self.count = self.count + 1
             }else if(self.count !== base){
                 secondarySound.play()
+                blink('.btn', 'blink-orange')
                 self.count = self.count + 1
             }else if(self.count == base){
                 secondarySound.play()
+                blink('.btn', 'blink-orange')
                 self.count = 1
             }
             setTimeout(()=>self.active(tempoMs, base, sound), timeOut)            
@@ -47,4 +53,17 @@ export function Metronome(){
 
 
     //Private Functions
+
+    /**
+     * 
+     * @param {string} selector - CSS Selector de l'élement à faire blinquer
+     * @param {string} className - CSS Class représentant le blink
+     */
+    function blink(selector, className){
+        let t = document.querySelector(selector);
+        t.classList.add(className)
+        setTimeout(() => {
+            t.classList.remove(className)
+        }, self.tempoMs / 4);
+    }
 }
