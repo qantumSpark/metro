@@ -1,3 +1,5 @@
+
+
 export function Metronome(){
     let self = this
     
@@ -6,6 +8,10 @@ export function Metronome(){
     this.base = 4; //Default value
     this.count = 1;
     this.isOn = false;
+    //Specifique pour Partitions
+    this.isPart = false;
+    this.counter = 1;
+    this.targetCount;
 
     //Methods
 
@@ -28,12 +34,12 @@ export function Metronome(){
         if(self.base === 6 || self.base === 9){
             timeOut = tempoMs / 2
         }
-        // console.log("base: ", base);
-        // console.log("timeOut: ", timeOut);
-        
         let primarySound = sound.primarySound;
         let secondarySound = sound.secondarySound;      
         if(self.isOn){
+            if(self.isPart){
+                self.counter += 1
+            }
             if(self.count == 1){
                 primarySound.play()
                 blink('.btn', 'blink-green')

@@ -19,7 +19,7 @@
 
     <main class="view center" id="view">
 
-        <section class="page home center active" id="home">            
+        <section class="page home center hidden" id="home">            
             <div class="container center">                    
                 <i class="plus"><img src="./src/css/icons/plus-solid.svg" alt="" srcset=""></i>
                 <i class="minus"><img src="./src/css/icons/minus-solid.svg" alt="" srcset=""></i>
@@ -36,7 +36,7 @@
                 <button class="btn gradient " id="btn">START</button>
             </div>            
         </section>
-        <section class="page part center hidden" id="part">
+        <section class="page part center active" id="part">
             <div class="form-container center">
                 <form class="center" >
                     <input type="number" name="mesures" class="nb-mesures morph-inv" id="nbreMesures" placeholder="mesures">
@@ -48,12 +48,36 @@
                         <option value="6">6/8</option>
                         <option value="9">9/8</option>
                     </select>
-                    <button type="submit" class="">ADD</button>
+                    <button class="">ADD</button>
                 </form>
             </div>
             <div class="mod-container center ">
-                
+                <div class="module">
+                    <h5 class="mesure">5</h5>
+                    <h5 class="base">4/4</h5>
+                    <h5 class="tempo">120</h5>
+
+                </div>
+                <div class="module">
+                    <h5 class="mesure">5</h5>
+                    <h5 class="base">4/4</h5>
+                    <h5 class="tempo">120</h5>
+
+                </div>
+                <div class="module">
+                    <h5 class="mesure">5</h5>
+                    <h5 class="base">4/4</h5>
+                    <h5 class="tempo">120</h5>
+
+                </div>
+                <div class="module">
+                    <h5 class="mesure">5</h5>
+                    <h5 class="base">4/4</h5>
+                    <h5 class="tempo">120</h5>
+
+                </div>
             </div>
+            <div class="btn-play">PLAY</div>
         </section>
         <section class="page save center hidden" id="save">
 
@@ -68,11 +92,9 @@
             <a data-name="save" class="nav-item"><img data-name="save" src="./src/css/icons/save-solid.svg" alt="" srcset=""></a data-name="home">
         </nav>
     </section>
-
+    
     <audio id="primSound" src="./src/audio/first.wav"></audio>
     <audio id="secSound" src="./src/audio/other.wav"></audio>
     <script src="/src/js/main.js"></script>
-    <script src="/src/js/nav.js"></script>
-    
 </body>
 </html>
